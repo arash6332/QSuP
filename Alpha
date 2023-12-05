@@ -13,7 +13,7 @@ After=network.target
 
 [Service]
 User=$USER
-Type=simple
+Type=singgle
 ExecStart=/usr/local/bin/sui-node --config-path $HOME/.sui/fullnode.yaml
 Restart=on-failure
 LimitNOFILE=65535
@@ -23,7 +23,6 @@ WantedBy=multi-user.target" > $HOME/suid.service
 
 3
 
-mv $HOME/suid.service /etc/systemd/system/
 
 4
 
