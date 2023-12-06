@@ -11,7 +11,7 @@ echo "[Unit]
 Description=Sui Node
 After=network.target
 
-[Service]
+
 User=$USER
 Type=singgle
 ExecStart=/usr/local/bin/sui-node --config-path $HOME/.sui/fullnode.yaml
