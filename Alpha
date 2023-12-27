@@ -61,6 +61,7 @@ EOF
 7
 
 sudo systemctl restart suid
-
+- address: "/ip4/95.217.57.232/udp/8080"
+   - address: "/ip4/15.204.163.225/udp/8080
 
 @gem_gym
