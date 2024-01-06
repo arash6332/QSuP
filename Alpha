@@ -63,5 +63,11 @@ EOF
 sudo systemctl restart suid
 - address: "/ip4/95.217.57.232/udp/8080"
    - address: "/ip4/15.204.163.225/udp/8080
-
+8
+kill screen suid
+sudo systemctl restart systemd-journald
+sudo systemctl daemon-reload
+sudo systemctl enable suid
+sudo systemctl restart suid
+journalctl -u suid -f
 @gem_gym
