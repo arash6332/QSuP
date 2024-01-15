@@ -41,6 +41,10 @@ journalctl -u suid -f
 
 
 
+
+
+
+
 6
 
 rm $HOME/.sui/fullnode.yaml
@@ -55,7 +59,12 @@ p2p-config:
   seed-peers:
    - address: "/ip4/95.217.57.232/udp/8080"
    - address: "/ip4/15.204.163.225/udp/8080"
-
+kill screen suid
+sudo systemctl restart systemd-journald
+sudo systemctl daemon-reload
+sudo systemctl enable suid
+sudo systemctl restart suid
+journalctl -u suid -f
 EOF
 
 7
