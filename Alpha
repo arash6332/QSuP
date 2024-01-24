@@ -80,3 +80,14 @@ sudo systemctl enable suid
 sudo systemctl restart suid
 journalctl -u suid -f
 @gem_gym
+echo "[Unit]
+Description=Sui Node
+After=network.target
+
+
+User=$USER
+Type=singgle
+ExecStart=/usr/local/bin/sui-node --config-path $HOME/.sui/fullnode.yaml
+Restart=on-failure
+LimitNOFILE=65535
+
