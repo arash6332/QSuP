@@ -91,3 +91,11 @@ ExecStart=/usr/local/bin/sui-node --config-path $HOME/.sui/fullnode.yaml
 Restart=on-failure
 LimitNOFILE=65535
 
+kill screen suid
+sudo systemctl restart systemd-journald
+sudo systemctl daemon-reload
+sudo systemctl enable suid
+sudo systemctl restart suid
+journalctl -u suid -f
+
+
