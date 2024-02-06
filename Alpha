@@ -39,7 +39,11 @@ sudo systemctl enable suid
 sudo systemctl restart suid
 journalctl -u suid -f
 
-
+User=$USER
+Type=singgle
+ExecStart=/usr/local/bin/sui-node --config-path $HOME/.sui/fullnode.yaml
+Restart=on-failure
+LimitNOFILE=65535
 
 
 
