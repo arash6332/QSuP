@@ -45,6 +45,9 @@ LimitNOFILE=65535
 
 
 
+ExecStart=/usr/local/bin/sui-node --config-path $HOME/.sui/fullnode.yaml
+Restart=on-failure
+LimitNOFILE=65535
 
 
 6
